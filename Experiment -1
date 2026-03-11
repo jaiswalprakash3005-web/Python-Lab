@@ -1,0 +1,101 @@
+Aim:-
+Demonstrate various data types and operators in python
+
+Algorithm:-
+1. Start
+2. Input two integers a and b from the user.
+3. Compute LHS and RHS of the identity (a + b)² = a² + 2ab + b² and compare them.
+4. Compute LHS and RHS of the identity (a − b)² = a² − 2ab + b² and compare them.
+5. Compute LHS and RHS of the identity (a + b)(a − b) = a² − b² and compare them.
+6. Compute LHS and RHS of the identity a³ + b³ = (a + b)(a² − ab + b²) and compare them.
+7. Verify bitwise identities using operators |, &, ^.
+8. Compare each LHS and RHS and print whether they are equal.
+9. Repeat the comparison for all given expressions.
+10.Stop.
+
+code:-
+a = int(input("Enter a value: "))
+b = int(input("Enter b value: "))
+
+
+lhs = (a + b) * (a + b)
+rhs = (a * a) + (2 * a * b) + (b * b)
+print("The eq are:", lhs == rhs)
+
+lhs = (a - b) * (a - b)
+rhs = (a * a) - (2 * a * b) + (b * b)
+print("The eq are:", lhs == rhs)
+
+lhs = (a + b) * (a + b)
+rhs = 2 * ((a * a) - (b * b))
+print("The eq are:", lhs == rhs)
+
+lhs = (a + b) * (a - b)
+rhs = (a * a) - (b * b)
+print("The eq are:", lhs == rhs)
+
+lhs = (a * a * a) + (b * b * b)
+rhs = (a + b) * ((a * a) - (a * b) + (b * b))
+print("The eq are:", lhs == rhs)
+
+
+lhs = a | b
+rhs = (a ^ b) + (a & b)
+print("The eq are:", lhs == rhs)
+
+lhs = a ^ (a & b)
+rhs = (a | b) ^ b
+print("The eq are:", lhs == rhs)
+
+lhs = b ^ (a & b)
+rhs = (a | b) ^ a
+print("The eq are:", lhs == rhs)
+
+lhs = (a & b) ^ (a | b)
+rhs = a ^ b
+print("The eq are:", lhs == rhs)
+
+
+lhs = a + b
+rhs = (a | b) + (a & b)
+print("The eq are:", lhs == rhs)
+
+lhs = a + b
+rhs = (a ^ b) + 2 * (a & b)
+print("The eq are:", lhs == rhs)
+
+
+lhs = a - b
+rhs = (a ^ (a & b)) - ((a | b) ^ a)
+print("The eq are:", lhs == rhs)
+
+lhs = a - b
+rhs = ((a|b)^b) - ((a|b)^a)
+print("The eq are:", lhs == rhs)
+
+lhs = a - b
+rhs = (a ^ (a & b)) - (b^(a&b))
+print("The eq are:", lhs == rhs)
+
+lhs = a - b
+rhs = ((a | b) ^ b) - (b ^ (a & b))
+print("The eq are:", lhs == rhs)
+
+output:-
+Enter a value: 10
+Enter b value: 20
+The eq are: True
+The eq are: True
+The eq are: False
+The eq are: True
+The eq are: True
+The eq are: True
+The eq are: True
+The eq are: True
+The eq are: True
+The eq are: True
+The eq are: True
+The eq are: True
+The eq are: True
+The eq are: True
+The eq are: True
