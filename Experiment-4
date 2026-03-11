@@ -1,0 +1,106 @@
+Aim:-
+Write a program to demonstrate list & related functions in python
+
+Algorithm:-
+1. Start
+2. Create a list named Network with different network technologies.
+3. Display the entire list.
+4. Display elements from index 1 to 4 using slicing.
+5. Add a new element "twin" to the list using append().
+6. Replace the element at index 4 with "with".
+7. Remove the element "Transport" from the list.
+8. Add multiple elements "enable" and`"Information" using extend().
+9. Find the index of "5G" and store it in variable L.
+10. Create a copy of the list and store it in Network_copy.
+11. Concatenate the original list and copied list into a new list`con.
+12. Display elements of the list using a for loop.
+13. Display elements of the list using a while loop.
+14. Clear all elements from the list using clear().
+15. Display the empty list.
+16. Stop.
+
+Code:-
+Network = [
+    "5G", "UP to 10Gbps", "6G", "1m/s",
+    "VR/AR", "4G", "Transport", "Smart Factories",
+    "New Radio", "mmwave", "SUB-6 GHz", "Spectrum", "Frequencybands"
+]
+
+print(Network)
+
+print(Network[1:5])
+
+Network.append("twin")
+print(Network)
+
+Network[4] = "with"
+print(Network)
+
+Network.remove("Transport")
+print(Network)
+
+Network.extend(["enable", "Information"])
+print(Network)
+
+L = Network.index("5G")
+print(L)
+
+Network_copy = Network.copy()
+print(Network_copy)
+
+con = Network + Network_copy
+print(con)
+
+for i in Network:
+    print(i)
+
+i = 0
+while i < len(Network):
+    print(Network[i])
+    i += 1
+
+Network.clear()
+print("After clear:", Network)
+
+
+Output:-
+['5G', 'UP to 10Gbps', '6G', '1m/s', 'VR/AR', '4G', 'Transport', 'Smart Factories', 'New Radio', 'mmwave', 'SUB-6 GHz', 'Spectrum', 'Frequencybands']
+['UP to 10Gbps', '6G', '1m/s', 'VR/AR']
+['5G', 'UP to 10Gbps', '6G', '1m/s', 'VR/AR', '4G', 'Transport', 'Smart Factories', 'New Radio', 'mmwave', 'SUB-6 GHz', 'Spectrum', 'Frequencybands', 'twin']
+['5G', 'UP to 10Gbps', '6G', '1m/s', 'with', '4G', 'Transport', 'Smart Factories', 'New Radio', 'mmwave', 'SUB-6 GHz', 'Spectrum', 'Frequencybands', 'twin']
+['5G', 'UP to 10Gbps', '6G', '1m/s', 'with', '4G', 'Smart Factories', 'New Radio', 'mmwave', 'SUB-6 GHz', 'Spectrum', 'Frequencybands', 'twin']
+['5G', 'UP to 10Gbps', '6G', '1m/s', 'with', '4G', 'Smart Factories', 'New Radio', 'mmwave', 'SUB-6 GHz', 'Spectrum', 'Frequencybands', 'twin', 'enable', 'Information']
+0
+['5G', 'UP to 10Gbps', '6G', '1m/s', 'with', '4G', 'Smart Factories', 'New Radio', 'mmwave', 'SUB-6 GHz', 'Spectrum', 'Frequencybands', 'twin', 'enable', 'Information']
+['5G', 'UP to 10Gbps', '6G', '1m/s', 'with', '4G', 'Smart Factories', 'New Radio', 'mmwave', 'SUB-6 GHz', 'Spectrum', 'Frequencybands', 'twin', 'enable', 'Information', '5G', 'UP to 10Gbps', '6G', '1m/s', 'with', '4G', 'Smart Factories', 'New Radio', 'mmwave', 'SUB-6 GHz', 'Spectrum', 'Frequencybands', 'twin', 'enable', 'Information']
+5G
+UP to 10Gbps
+6G
+1m/s
+with
+4G
+Smart Factories
+New Radio
+mmwave
+SUB-6 GHz
+Spectrum
+Frequencybands
+twin
+enable
+Information
+5G
+UP to 10Gbps
+6G
+1m/s
+with
+4G
+Smart Factories
+New Radio
+mmwave
+SUB-6 GHz
+Spectrum
+Frequencybands
+twin
+enable
+Information
+After clear: []
