@@ -1,0 +1,38 @@
+Aim:-
+Write a program to demonstrate dictionary & related functions in python
+
+Algorithm:-
+1. Start
+2. Create an empty dictionary phonebook
+3. Input name from the user
+4. Input phone number from the user
+5. Store name and number in the dictionary → phonebook[name] = number
+6. Display the phonebook
+7. Input a name to search
+8. Use get() to find the phone number
+9. If the name exists, display the phone number; otherwise display "Contact not found"
+10. Input a name to delete
+11. Remove the name from the dictionary using pop()
+12. Display the updated phonebook
+13. End
+
+Code:-
+phonebook = {}
+name = input("Enter name: ")
+number = input("Enter phone number: ")
+phonebook[name] = number
+print("Phonebook:", phonebook)
+search = input("Enter name to search: ")
+print("Phone number:", phonebook.get(search, "Contact not found"))
+delete = input("Enter name to delete: ")
+phonebook.pop(delete, "Contact not found")
+print("Updated phonebook:", phonebook)
+
+Output:-
+Enter name: prakash
+Enter phone number: 1234567890
+Phonebook: {'prakash': '1234567890'}
+Enter name to search: prakash
+Phone number: 1234567890
+Enter name to delete: prakash
+Updated phonebook: {}
