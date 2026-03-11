@@ -1,0 +1,84 @@
+Aim:-
+Write a program demonstate tuple & related functions in python
+
+Algorithm:-
+1. Start
+2. Create three tuples:
+    t1 = (1, 2, 3)
+    t2 = (230, 36, 200)
+    t3 = ("Apples", "Banana", "Watermelon", "Dragon Fruit")
+3. Display the original tuples t1, t2, t3
+4. Display the first element of t1
+5. Display the second element of t2
+6. Display the third element of t3
+7. Find and display the length of t1
+8. Find and display the length of t2
+9. Find and display the length of t3
+10. Create a nested tuple using t1 and t3 and display it
+11. Concatenate t2 and t3 to create t4
+12. Display t4
+13. Check whether 2 is present in t1 and display the result
+14. Check whether "mango" is present in t3 and display the result
+15. Input a fruit name word from the user
+16. If word is present in t3, display that it is present
+17. Otherwise display that it is not present
+18. Create a tuple numbers = (98, 28, 23, 10, 4, 10, 48, 84, 19)
+19. Find and display the maximum value in numbers
+20. Find and display the minimum value in numbers
+21. Find and display the sum of all values in numbers
+22. End
+
+Code:-
+t1 = (1, 2, 3)
+t2 = (230, 36, 200)
+t3 = ("Apples", "Banana", "Watermelon", "Dragon Fruit")
+
+print("Original Tuple:", t1, t2, t3)
+
+print("First element of t1:", t1[0])
+print("Second element of t2:", t2[1])
+print("Third element of t3:", t3[2])
+
+print("Length of tuple 1:", len(t1))
+print("Length of tuple 2:", len(t2))
+print("Length of tuple 3:", len(t3))
+
+nested_tuple = (t1, t3)
+print("Nested Tuple:", nested_tuple)
+
+t4 = t2 + t3
+print("Concatenation of t2 and t3:", t4)
+print("-" * 20)
+
+print("Is 2 in t1?", 2 in t1)
+print("Is mango in t3?", "mango" in t3)
+
+word = input("Enter a fruit name to check: ")
+if word in t3:
+    print(word, "is present in tuple")
+else:
+    print(word, "is not present in tuple")
+
+numbers = (98, 28, 23, 10, 4, 10, 48, 84, 19)
+print("Max value:", max(numbers))
+print("Min value:", min(numbers))
+print("Sum of value:", sum(numbers))
+
+Output:-
+Original Tuple: (1, 2, 3) (230, 36, 200) ('Apples', 'Banana', 'Watermelon', 'Dragon Fruit')
+First element of t1: 1
+Second element of t2: 36
+Third element of t3: Watermelon
+Length of tuple 1: 3
+Length of tuple 2: 3
+Length of tuple 3: 4
+Nested Tuple: ((1, 2, 3), ('Apples', 'Banana', 'Watermelon', 'Dragon Fruit'))
+Concatenation of t2 and t3: (230, 36, 200, 'Apples', 'Banana', 'Watermelon', 'Dragon Fruit')
+--------------------
+Is 2 in t1? True
+Is mango in t3? False
+Enter a fruit name to check: orange
+orange is not present in tuple
+Max value: 98
+Min value: 4
+Sum of value: 324
