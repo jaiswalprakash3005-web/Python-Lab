@@ -1,0 +1,167 @@
+Aim:-
+Write a program to implement control flow statement in python
+
+Algorithm:-
+1. Start
+2. Input runs_scored, balls_faced, wickets_taken, runs_conceded, overs_bowled, catches_taken
+3. Calculate Strike Rate
+   strike_rate = (runs_scored / balls_faced) × 100
+4. Calculate Economy Rate
+   economy_rate = runs_conceded / overs_bowled
+5. Check Batting Performance
+   If runs_scored ≥ 50 and strike_rate ≥ 120 → batter = "excellent batter"
+   Else if runs_scored ≥ 30 and strike_rate ≥ 100 → batter = "good batter"
+   Else if runs_scored ≥ 20 → batter = "average batter"
+   Else → batter = "poor batter"
+6. Check Bowling Performance
+   If wickets_taken ≥ 3 and economy_rate ≤ 6 → bowler = "excellent bowler"
+   Else if wickets_taken ≥ 2 and economy_rate ≤ 8 → bowler = "good bowler"
+   Else if wickets_taken ≥ 1 → bowler = "average bowler"
+   Else → bowler = "poor bowler"
+7. Check Fielding Performance
+   If catches_taken ≥ 2 → fielder = "outstanding fielder"
+   Else if catches_taken = 1 → fielder = "active fielder"
+   Else → fielder = "needs improvement"
+8. Determine Overall Result
+   If batter = "excellent batter" and bowler = "excellent bowler" → result = "Star all-rounder"
+   Else if batter = "good batter" and bowler = "good bowler" → result = "Strong all-rounder"
+   Else if batter = "good batter" and bowler = "poor bowler" → result = "Supporting all-rounder"
+   Else → result = "needs improvement"
+9. Display strike_rate, economy_rate, batter, bowler, fielder, result
+10. Stop
+
+Code:-
+runs_scored = int(input("Enter runs scored: "))
+balls_faced = int(input("Enter balls faced: "))
+wickets_taken = int(input("Enter wickets taken: "))
+runs_conceded = int(input("Enter runs conceded: "))
+overs_bowled = float(input("Enter overs bowled: "))
+catches_taken = int(input("Enter catches taken: "))
+
+strike_rate = (runs_scored / balls_faced) * 100 
+economy_rate = runs_conceded / overs_bowled 
+
+if runs_scored >= 50 and strike_rate >= 120:
+    batter = "excellent batter"
+elif runs_scored >= 30 and strike_rate >= 100:
+    batter = "good batter"
+elif runs_scored >= 20:
+    batter = "average batter"
+else:
+    batter = "poor batter"
+
+if wickets_taken >= 3 and economy_rate <= 6:
+    bowler = "excellent bowler"
+elif wickets_taken >= 2 and economy_rate <= 8:
+    bowler = "good bowler"
+elif wickets_taken >= 1:
+    bowler = "average bowler"
+else:
+    bowler = "poor bowler"
+
+if catches_taken >= 2:
+    fielder = "outstanding fielder"
+elif catches_taken == 1:
+    fielder = "active fielder"
+else:
+    fielder = "needs improvement"
+
+if batter == "excellent batter" and bowler == "excellent bowler":
+    result = "Star all-rounder"
+elif batter == "good batter" and bowler == "good bowler":
+    result = "Strong all-rounder"
+elif batter == "good batter" and bowler == "poor bowler":
+    result = "Supporting all-rounder"
+else:
+    result = "needs improvement"
+
+print("Strike rate:", strike_rate)
+print("Economy rate:", economy_rate)
+print("Batting:", batter)
+print("Bowling:", bowler)
+print("Fielding:", fielder)
+print("Overall result:", result)
+
+Output:-
+Enter runs scored: 100
+Enter balls faced: 50
+Enter wickets taken: 5
+Enter runs conceded: 20
+Enter overs bowled: 4
+Enter catches taken: 5
+Strike rate: 200.0
+Economy rate: 5.0
+Batting: excellent batter
+Bowling: excellent bowler
+Fielding: outstanding fielder
+Overall result: Star all-rounder
+
+
+Aim:-
+Write a program to implement for loop statement in python
+
+Algorithm:-
+1. Start
+2. Input a number **n** from the user
+3. Set i = 1
+4. Repeat while i ≤ 10
+5. Calculate n × i
+6. Display the result
+7. Increase i = i + 1
+8. Stop when i > 10
+9. End
+
+Code:-
+n=int(input("enter a number"))
+for i in range(1,11):
+   print(n*i)
+
+output:-
+enter a number2
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+Aim:-
+Write a program to implement while loop statement in python
+
+Algorithm:-
+1. Start
+2. Input a number n from the user
+3. Set fact = 1
+4. Set i = 1
+5. Check if i ≤ n
+6. If true, calculate fact = fact × i
+7. Increase i = i + 1
+8. Print fact
+9. Repeat steps 5–8 until i > n
+10. Stop
+11. End
+
+Code:-
+n=int(input("enter a number:"))
+fact=1
+i=1
+while i<=n:
+   fact*=i
+   i+=1
+   print(fact)
+
+Output:-
+enter a number:4
+1
+2
+6
+24
+
+
+
+
+
