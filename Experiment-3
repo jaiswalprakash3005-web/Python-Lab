@@ -1,0 +1,43 @@
+Aim:-
+Write a program to implement various string operations
+
+Algorithm:-
+1. Start
+2. Input text1 from the user
+3. Input text2 from the user
+4. Check whether character 'i' is present in **text1** and display the result
+5. Find the position of character 't' in text1 and display it
+6. Replace the word **"lost"** with **"win"** in text2 and display the result
+7. Display the first two characters of text1
+8. Split text1 using the character 'e' and display the result
+9. Convert text1 into uppercase and display it
+10. Convert text2 into lowercase and display it
+11. Convert text2 into title case and display it
+12. Count the number of times character 'i' appears in text1 and display it
+13. End
+
+Code:-
+text1 = str(input("Enter the text 1: "))
+text2 = str(input("Enter the text 2: "))
+print("i" in text1)
+print(text1.find('t'))
+print(text2.replace('lost', 'win'))
+print(text1[0:2])
+print(text1.split('e'))
+print(text1.upper())
+print(text2.lower())
+print(text2.title())
+print(text1.count('i'))
+
+Output:-
+Enter the text 1: india win the match
+Enter the text 2: india lost the match
+True
+10
+india win the match
+in
+['india win th', ' match']
+INDIA WIN THE MATCH
+india lost the match
+India Lost The Match
+3
