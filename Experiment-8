@@ -1,0 +1,173 @@
+Aim:-
+Implement ‘re’ module in python
+
+Algorithm:-
+
+1. Algorithm for re.match() 
+Algorithm:
+
+1. Start
+2. Import re module
+3. Initialize string USN = "ID_24BCAR0479"
+4. Use re.match("ID", USN) to check beginning of string
+5. If match is found
+    . Print "valid USN number"
+6. Else
+    . Print "Invalid USN"
+7. Stop
+
+2. Algorithm for re.search() 
+Algorithm:
+
+1. Start
+2. Import re module
+3. Initialize string msg = "device connected to 5g network"
+4. Use re.search("5g", msg)
+5. If match found
+    . Print "5g network found"
+6. Stop
+
+3. Algorithm for re.findall() 
+Algorithm:
+
+1. Start
+2. Import re module
+3. Initialize string data = "temp: 24 humidity: 60 pressure: 1000"
+4. Use re.findall(r"\d+", data)
+5. Store result in variable
+6. Print the list of numbers
+7. Stop
+
+4. Algorithm for re.finditer() 
+Algorithm:
+
+1. Start
+2. Import re module
+3. Initialize string text
+4. Define pattern "cat"
+5. Use re.finditer(pattern, text)
+6. For each match:
+    . Print matched word
+    . Print start position
+    . Print end position
+7. Stop
+
+5. Algorithm for re.split() 
+Algorithm:
+
+1. Start
+2. Import re module
+3. Initialize string vowels = "a,b,c,d,e"
+4. Use re.split(",", vowels)
+5. Store result in list
+6. Print the list
+7. Stop
+
+6. Algorithm for re.sub() 
+Algorithm:
+
+1. Start
+2. Import re module
+3. Initialize string text
+4. Use re.sub("6g", "5g", text)
+5. Store modified string
+6. Print result
+7. Stop
+
+7. Algorithm for re.fullmatch() 
+Algorithm:
+
+1. Start
+2. Import re module
+3. Input date from user
+4. Define pattern ^\d{2}/\d{2}/\d{4}$
+5. Use re.fullmatch(pattern, date)
+6. If match found
+    . Print "valid date format"
+7. Else
+    . Print "invalid date format"
+8. Stop
+
+Code:-
+
+1.re.match()
+
+import re
+USN = "ID_24BCAR0479"
+r = re.match("ID", USN)
+if r:
+    print("valid USN number")
+else:
+    print("Invalid USN")
+
+Output:-
+valid USN number
+
+2.re.search()
+
+import re
+msg = "device connected to 5g network"
+r = re.search("5g", msg)
+if r:
+    print("5g network found")
+
+Output:-
+5g network found
+
+3.re.findall()
+
+import re
+data = "temp: 24 humidity: 60 pressure: 0001"
+r = re.findall(r"\d+", data)
+print(r)
+
+Output:-
+['24', '60', '0001']
+
+4.re.finditer()
+
+import re
+text = "apple ball cat dog elephant"
+pattern = "cat"
+matches = re.finditer(pattern, text)
+for b in matches:
+    print("match:", b.group(), "start position:", b.start(), "end position:", b.end())
+
+Output:-
+match: cat start position: 11 end position: 14
+
+5.re.split()
+
+import re
+vowels = "a,e,i,o,u"
+r = re.split(",", vowels)
+print(r)
+
+Output:-
+['a', 'e', 'i', 'o', 'u']
+
+6.re.sub()
+
+import re
+text = "the network will upgrade from 5g soon"
+r = re.sub("6g", "5g", text)
+print(r)
+
+Output:-
+the network will upgrade from 5g soon
+
+7.re.fullmatch()
+
+import re
+
+date = input("enter date(DD/mm/yy):")
+pattern = r'^\d{2}/\d{2}/\d{4}$'
+
+if re.fullmatch(pattern, date):
+    print("valid date format")
+else:
+    print("invalid date format")
+
+Output:-
+enter date(DD/mm/yy):30/05/2006
+valid date format
