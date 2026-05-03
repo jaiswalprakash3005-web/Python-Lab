@@ -1,0 +1,52 @@
+Aim:-
+b. Write a program to implement Matplotlib and Pandas libraries in python
+
+Algorithm:-
+1. Start
+2. Import Libraries
+    . Import Pandas library as pd
+    . Import Matplotlib pyplot module as plt
+3. Create Data
+    . Define a dictionary with:
+       . Key "teams" and values ["csk", "mi", "kkr", "rcb"]
+       . Key "runs" and values [190, 150, 200, 170]
+4. Create DataFrame
+    . Convert the dictionary into a DataFrame using pd.DataFrame()
+    . Store it in variable df
+5. Display Data
+    . Print the DataFrame
+6. Plot Bar Graph
+    . Use plt.bar() to create a bar chart
+       . X-axis: df["teams"]
+       . Y-axis: df["runs"]
+7. Add Labels and Title
+    . Set X-axis label using plt.xlabel("teams")
+    . Set Y-axis label using plt.ylabel("runs")
+    . Set title using plt.title("IPL Team Runs")
+8. Display Graph
+    . Use plt.show() to display the bar chart
+9. Stop
+
+Code:-
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame({
+    "teams": ["csk", "mi", "kkr", "rcb"],
+    "runs": [190, 150, 200, 170]
+})
+
+print(df)
+
+plt.bar(df["teams"], df["runs"])
+plt.xlabel("teams")
+plt.ylabel("runs")
+plt.title("IPL Team Runs")
+plt.show()
+
+Output:-
+  teams  runs
+0   csk   190
+1    mi   150
+2   kkr   200
+3   rcb   170
