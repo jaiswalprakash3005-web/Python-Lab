@@ -1,0 +1,53 @@
+Aim:-
+b. Write a Program to implement various types of visualization in python.
+
+Algorithm:-
+1. Start
+2. Import matplotlib.pyplot as plt
+3. Create two lists:
+    . names → student names
+    . marks → corresponding marks
+4. Bar Chart
+    . Create a new figure
+    . Plot bar chart using plt.bar(names, marks)
+    . Add title, X-label, and Y-label
+    . Display using plt.show()
+5. Line Chart
+    . Create a new figure
+    . Plot line chart using plt.plot(names, marks)
+    . Add marker, title, X-label, and Y-label
+    . Display using plt.show()
+6. Pie Chart
+    . Create a new figure
+    . Plot pie chart using plt.pie(marks, labels=names)
+    . Add percentage (autopct) and title
+    . Display using plt.show()
+7. Stop
+
+Code:-
+import matplotlib.pyplot as plt
+
+names = ["A", "B", "C", "D"]
+marks = [80, 75, 90, 85]
+
+# Bar Chart
+plt.figure()
+plt.bar(names, marks)
+plt.title("Bar Chart - Student Marks")
+plt.xlabel("Students")
+plt.ylabel("Marks")
+plt.show()
+
+# Line Chart
+plt.figure()
+plt.plot(names, marks, marker='o')
+plt.title("Line Chart - Student Marks")
+plt.xlabel("Students")
+plt.ylabel("Marks")
+plt.show()
+
+# Pie Chart
+plt.figure()
+plt.pie(marks, labels=names, autopct="%1.1f%%")
+plt.title("Pie Chart - Marks Distribution")
+plt.show()
