@@ -1,0 +1,99 @@
+Aim:-
+a. Write Program to Load, Clean and Exploring the data using python.
+
+Algorithm:_
+1. Start
+2. Import pandas library as pd
+3. Create a dictionary with Name, Marks, and Age
+4. Convert the dictionary into a DataFrame (df)
+5. Display original data and first 5 rows (head())
+6. Show data information using df.info()
+7. Check missing values using df.isnull().sum()
+8. Remove missing values using df.dropna() → store in df_clean
+9. Display cleaned data
+10. Display summary statistics using df_clean.describe()
+11. Stop
+
+Code:-
+import pandas as pd
+
+data = {
+    "Name": ["A", "B", "C", "D", "E"],
+    "Marks": [80, 75, None, 90, 85],
+    "Age": [20, 21, 19, None, 22]
+}
+
+df = pd.DataFrame(data)
+
+print("Original Data:")
+print(df)
+
+print("\nFirst 5 rows:")
+print(df.head())
+
+print("\nData Info:")
+print(df.info())
+
+print("\nMissing values:")
+print(df.isnull().sum())
+
+df_clean = df.dropna()
+
+print("\nCleaned Data:")
+print(df_clean)
+
+print("\nSummary statistics:")
+print(df_clean.describe())
+
+Output:-
+Original Data:
+  Name  Marks   Age
+0    A   80.0  20.0
+1    B   75.0  21.0
+2    C    NaN  19.0
+3    D   90.0   NaN
+4    E   85.0  22.0
+
+First 5 rows:
+  Name  Marks   Age
+0    A   80.0  20.0
+1    B   75.0  21.0
+2    C    NaN  19.0
+3    D   90.0   NaN
+4    E   85.0  22.0
+
+Data Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 5 entries, 0 to 4
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   Name    5 non-null      object 
+ 1   Marks   4 non-null      float64
+ 2   Age     4 non-null      float64
+dtypes: float64(2), object(1)
+memory usage: 252.0+ bytes
+None
+
+Missing values:
+Name     0
+Marks    1
+Age      1
+dtype: int64
+
+Cleaned Data:
+  Name  Marks   Age
+0    A   80.0  20.0
+1    B   75.0  21.0
+4    E   85.0  22.0
+
+Summary statistics:
+       Marks   Age
+count    3.0   3.0
+mean    80.0  21.0
+std      5.0   1.0
+min     75.0  20.0
+25%     77.5  20.5
+50%     80.0  21.0
+75%     82.5  21.5
+max     85.0  22.0
